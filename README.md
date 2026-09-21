@@ -1,6 +1,7 @@
-Credit Card Default Prediction: Cost-Sensitive Optimization & SHAP
+# Credit Card Default Prediction: Cost-Sensitive Optimization & SHAP
 
 A business-driven machine learning project that predicts credit card default risk while optimizing lending decisions for net cash flow rather than classification accuracy alone.
+
 
 ## Project Overview
 
@@ -38,7 +39,7 @@ LightGBM with cross-entropy loss achieved the highest validation AUC and general
 
 ### Cost-Sensitive Threshold Optimization
 
-Instead of applying the default 0.50 cutoff, the project evaluates lending outcomes using a custom net cash-flow objective based on a 50% loss-given-default assumption and a 10% profit margin. The selected threshold of 0.13 minimizes net business cost under this framework.
+Instead of applying the default 0.50 cutoff, the project evaluates lending outcomes using a custom net-cash-flow objective based on a 50% loss-given-default assumption and a 10% profit margin. The selected threshold of 0.13 minimizes net business cost under this framework.
 
 ### Feature Engineering
 
@@ -57,19 +58,13 @@ SHAP analysis provides:
 - **Global explanations:** Payment history and delinquency behavior dominate model importance, while demographic variables rank substantially lower.
 - **Local explanations:** Individual waterfall plots show which factors increase or reduce each customer's predicted risk.
 
-<img width="1189" height="813" alt="image" src="https://github.com/user-attachments/assets/0f296fd8-40ef-48b1-a9ab-ab9d2c0832eb" />
-
-
 ## Repository Structure
 
 ```text
 credit_default.ipynb     End-to-end data preparation, modelling and evaluation
-app.py                   Flask dashboard application
-data/                    Source and dashboard-ready data
-report/                  LaTeX source and final project report
-static/                  Dashboard styles and visual assets
-templates/               Flask HTML templates
-requirements.txt         Python dependencies
+data/                    Data used by the analysis
+report.pdf               Final project report
+README.md                Project overview and key results
 ```
 
 ## Run the Analysis
@@ -77,24 +72,12 @@ requirements.txt         Python dependencies
 Python 3.8 or later is recommended.
 
 ```bash
-pip install -r requirements.txt
-pip install notebook
+pip install numpy pandas matplotlib lightgbm scikit-learn statsmodels seaborn shap notebook
 jupyter notebook credit_default.ipynb
 ```
 
 Run the notebook from top to bottom to reproduce data cleaning, feature engineering, model comparison, threshold optimization, and SHAP analysis.
 
-## Run the Dashboard Locally
-
-The previous hosted demo is no longer active. The complete dashboard source remains available in this repository and can be run locally:
-
-```bash
-pip install -r requirements.txt
-python app.py
-```
-
-Then open [http://127.0.0.1:5000](http://127.0.0.1:5000) in a browser. The dashboard uses `data/webapp_data.csv` to display customer-level predictions and interactive SHAP explanations.
-
 ## Tech Stack
 
-Python, pandas, NumPy, scikit-learn, LightGBM, SHAP, Flask, Matplotlib and Seaborn.
+Python, pandas, NumPy, scikit-learn, LightGBM, SHAP, Matplotlib, Seaborn and Jupyter Notebook.
