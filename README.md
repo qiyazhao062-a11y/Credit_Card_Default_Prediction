@@ -57,7 +57,8 @@ SHAP analysis provides:
 - **Global explanations:** Payment history and delinquency behavior dominate model importance, while demographic variables rank substantially lower.
 - **Local explanations:** Individual waterfall plots show which factors increase or reduce each customer's predicted risk.
 
-![Global SHAP Feature Importance](static/images/global_feature_shap_absolute.png)
+<img width="1189" height="813" alt="image" src="https://github.com/user-attachments/assets/0f296fd8-40ef-48b1-a9ab-ab9d2c0832eb" />
+
 
 ## Repository Structure
 
