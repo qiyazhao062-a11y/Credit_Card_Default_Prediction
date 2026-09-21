@@ -2,8 +2,6 @@ Credit Card Default Prediction: Cost-Sensitive Optimization & SHAP
 
 A business-driven machine learning project that predicts credit card default risk while optimizing lending decisions for net cash flow rather than classification accuracy alone.
 
-[View Final Report]:report.pdf) | [Open Analysis Notebook]:credit_default.ipynb
-
 ## Project Overview
 
 Financial institutions must balance expected lending returns against default risk. The costs are asymmetric:
